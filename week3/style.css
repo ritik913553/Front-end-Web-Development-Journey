@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(194, 182, 182); */
+}
+#page1 #nav{
+    height: 7vw;
+    width: 100%;
+    /* background-color: royalblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+}
+#nav-part1{
+    height: 100%;
+    width: 45%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+#nav-part1 img{
+    height: 75%;
+}
+#nav-part1 h4{
+    font-weight: 400;
+}
+#nav-part1 h4:hover{
+    cursor: pointer;
+}
+
+#nav-part2{
+    width: 40%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;/*div ke last me chl jayega*/
+}
+#nav-part2 button{
+    background-color:black;
+    color: white;
+    font-size: 1.3vw;
+    padding: 1vw 2vw;
+    border-radius: 50px;
+    border: none; /*boreder nhi dikhega*/
+}
+#nav-part2 button:nth-child(1){
+    background-color:transparent;
+    color: black;
+}
+
+#content{
+    height: calc(100% - 7vw);
+    /* background-color: cyan; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    padding: 5vw 3vw;
+}
+#content h3{
+    background-color:#FFCA9F;
+    padding: 0.7vw 2vw;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+#content h1{
+    font-size: 5.3vw;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Source Serif 4";
+    line-height: 5.3vw;
+}
+#content h4{
+    font-size: 1.6vw;
+    font-weight: 400;
+    font-family: "Source Serif 4";
+}
+#content button{
+    padding: 1vw 1.5vw;
+    font-size: 1.3vw;
+    border-radius: 50px;
+    background-color: #565564;
+    color: white;
+    border: none;
+}
+#scroll{
+    height: 52%;
+    width:100%;
+    /* background-color: rebeccapurple; */
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:hidden ;
+    overflow-y:hidden;
+    
+}
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+.elem{
+    flex-shrink: 0;
+    height: 100%;
+    width: 19%;
+    /* background-color: rgb(105, 113, 185); */
+    margin-right: 2.3vw;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+
+    animation-name: scrollable;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.elem:nth-last-child(1){
+    margin-right: 0;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.elem video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.elem .text{
+    height: 30%;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    padding: 0vw 1.3vw;
+}
+.elem .text h4{
+    font-size: 1vw;
+    margin-right: 2vw;
+    line-height: 1.5vw;
+}
+.elem .text button{
+    font-size: 0.8vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    padding: 0.4vw 1vw;
+    margin-top: 0.6vw ;
+    border-radius: 50px;
+    border: 0.5px solid rgb(221, 210, 210);
+}
+@keyframes scrollable {
+    from{
+        transform: translateX();
+    }
+    to{
+        transform: translateX(-700%);
+    }
+}
+
+
+#page2{
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding: 4vw;
+    padding-top: 6vw;
+}
+#page2 h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #0D0C22;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+.box{
+    display: inline-block;
+    height: 17vw;
+    width: 21vw;
+    /* background-color: red; */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.6vw;
+    position: relative;
+    transition: all ease 0.5s;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box:hover{
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.486); /*x-axis y-axis blur color*/
+}
+.box-bottom{
+    height: 40%;
+    width: 100%;
+    background:linear-gradient(transparent , rgba(0, 0, 0, 0.63));
+    position: absolute;
+    bottom: -40%;
+    transition: all ease 0.3s;
+    color: white;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box:hover .box-bottom{
+    bottom: 0;
+}
+.box-bottom i{
+    background-color:white;
+    color: black;
+    padding: 0.8vw;
+    border-radius: 50%;
+    margin-right: 0.6vw;
+    font-weight: 600;
+}
+.box-bottom i:hover{
+    color: #565564;
+}
+.box-bottom h3{
+    font-weight: 500;
+}
+
+body > h3{
+    font-size:1.3vw ;
+    font-weight: 400;
+    /* background-color: red; */
+    text-align: center;
+    width: fit-content;
+    margin-top: 1vw;
+    margin-left: 40vw;
+    margin-bottom: 10vw;
+    border-radius: 50px;
+    padding: 1vw 2vw;
+    border: solid black 1px;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: #FFDA79;
+    padding-top: 9vw;
+    position: relative;
+}
+#page3 h1{
+    text-align: center;
+    font-size: 66px;
+    font-weight: 500;
+    color: #0D0C22;
+    line-height: 5vw;
+}
+#page3 h4{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.6vw;
+    margin-top: 2vw;
+    line-height: 2.5vw;
+}
+#page3 h3{
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.6vw;
+    margin-top: 10vw;
+    line-height: 2.5vw;
+}
+#page3 h3 a{
+    color: black;
+}
+#page3 #b1{
+    position: absolute;
+    left: 37%;
+    padding: 1vw 2vw;
+    border: solid black 1px;
+    border-radius: 50px;
+    font-size: 1.2vw;
+    background-color: #08061d;
+    color: white;
+    margin-top: 2.5vw;
+}
+#page3 #b2{
+    position: absolute;
+    left: 50%;
+    padding: 1vw 2vw;
+    border: solid black 1px;
+    border-radius: 50px;
+    font-size: 1.2vw;
+    color: #08061d;
+    margin-top: 2.5vw;
+}
+
+#page4Scroll{
+    margin-top: 5vw;
+    height: 16vw;
+    width:100%;
+    /* background: rebeccapurple; */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.element{
+    flex-shrink: 0;
+    height: 100%;
+    width: 15vw;
+    /* background-color: yellow; */
+    margin-right: 2.2vw;
+    
+    animation-name: scranime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    transition: all ease 0.5s;
+}
+.element:nth-last-child(1){
+    margin-right: 0;
+}
+.element img{
+    margin-top: 2vw;
+    width: 100%;
+    height: 70%;
+    /* border-top: solid 5px #E6FDC9;
+    border-right: solid 5px #E6FDC9; */
+    box-shadow: 5px -5px #E6FDC9;
+    
+}
+.element h4{
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+#page4Scroll::-webkit-scrollbar{
+    display: none;
+}
+@keyframes scranime {
+    from{
+        transform: translateX();
+    }
+    to{
+        transform: translateX(-250%);
+    }
+}
+.element:hover{
+    cursor: pointer;
+}
+#page4Scroll:hover .element{
+    animation-play-state:paused;
+}
+
+#footer1{
+    margin-top: 5vw;
+    height: 7vw;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+}
+#footer1 #part1{
+    height: 100%;
+    width: 80%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer1 #part1 img{
+    height: 80%;
+    width: 120px;
+    margin-right: 3vw;
+}
+#footer1 #part2{
+    height: 100%;
+    width: 20%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#footer1 #part2 i{
+    font-size: 1.7vw;
+    margin-right: 0.5vw;
+}
+
+#footer{
+    height: 7vw;
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+#footer #part1{
+    height: 100%;
+    width: 25%;
+    /* background-color: cyan; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer h5{
+    font-size: 1.2vw;
+    font-weight: 300;
+    font-family: 'Gil Roy';
+}
+
+#footer #part2{
+    height: 100%;
+    width: 35%;
+    /* background-color: cyan; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button:hover{
+    cursor: pointer;
+}
