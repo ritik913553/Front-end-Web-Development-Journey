@@ -1,0 +1,572 @@
+Syllabus
+    js the language(code likhna sikhna )-> js=language
+            ->managed (adding new features and remove old features ,overall development of js) 
+              by ecmascript(comunity)
+            ->mainly two version of js-> 1.(es5 and before) 2.(es6 and after)
+                difference b/w both = var(in es5) and let (in es6)
+
+        basics (file connect krenge and load karenge script ko,basics of code execution,grammar and understanding
+                of errors)
+                ctrl + shift + j  -> for open console in live server(here we find error in js code and which line)
+
+        inbuilt features - 
+                console ,alert, prompt (tino browser ke parts hai aur hum unhe use kr skte hai with the help of js )
+                    console.log("Ritik"); ->for printing normal
+                    console.warn();  -> printing in the form of warning
+                    consol.error();  -> printing in the form of error
+                    alert('hey');  -> show alert 'hey' when browser is reload (in the top of page)
+                    promt alert ka bhai hai jo ki alert se ek kadam aage hai
+                    prompt('nam btao');//ye user se input lene me help aata hai
+
+        variables(var) constants(const);
+            har programming language mein data se deal krna hota hai,
+            wo alag alag prakar ka data ho skta hai,ab aisa data jisse
+            humein deal krna hai ,wo save to krna pdega na,
+            wo data save krne ke liye hume saving space chaiyea
+            jaha pr data save ho jaaye and ye save krne ke liye unhe
+            kuch naam bhi dena padega and isi liye humein
+            variables and constants banane pdte hai taaki data
+            save ho jaae and unks koi naam bhi ho taki bad me unhe
+            access kar paaye.
+            
+            variables and constants hote hai data store krne ke
+            liye and variables mein data store hota hai and 
+            us data ko change bhi kr skte hai and constants mein data
+            store hota hai lekin use dubara change nhi kr skte
+            , dono hi browser par memory lete hai and browser RAM
+            par chalta hai to technically dono RAM par chalte
+            hai ya fir space lete hai
+
+            JS--------> chrome ka space(heap memory)---------->RAM
+
+        compilers and interpreters (translators hai jo ki english
+                        code ko covert kr rhe hai machine code mein)
+            
+            js language english words use krti hai and computers english
+            nahi samajhte,wo samajhte hai 0 and 1 jisko current flow and
+            current bypass bhi kah skte hai,to hum ek translator
+            lagaayenge jo ki hamara code english mein lega and usse
+            0 and 1 mein convert kr dega.
+
+            ex-: js   me (Interpreters) use hote hai
+            java me (compiler) use hote hai
+
+            JIT(just-in-time) compiler - interpreter ki shuraati taakat
+                    (fast conversion) use krta hai ans compiler ki running taakat
+                    use krta hai
+
+                    Some modern environments use a combination of both compilation 
+                    and interpretation, known as Just-In-Time (JIT) compilation. The 
+                    code is compiled to an intermediate form and then interpreted or 
+                    compiled to machine code at runtime. This technique aims to combine
+                    the advantages of both compilers and interpreters.
+                    Examples:
+                        JavaScript engines (e.g., V8 used in Google Chrome)
+        
+        window->(window is the collection of all the tools which are available in
+                the browser and are given by the browser to use in js)
+        
+                ther are many features which are frequently used in js
+                and they are not thepart of js,they are not the part of
+                js the language but they are available in the browser
+                and when you use them in js they are called from the
+                browser not js.
+                ex:- console ,alert ,prompt etc
+                window ek bucket samajh lo jismein saari wo cheeje available
+                hai jo browser deta hai js mein use krne ke liye kyoki wo 
+                saari cheejein js ka part nhi balki browser ka part hai
+                which is available to use in js,we can also say that they're provided
+                by browser to use in js,all these features which are made 
+                available via browser are put  inside window
+
+        data types
+                types mtlb data ka roop
+                ex:-
+                        "ritik"   -string
+                        12      -integer
+                        12.3    -float
+                        22.0    -float
+                        true    -boolean
+                        a       -character
+                        "12nhduei45"- string
+
+                types -> primitive datatypes and reference datatype
+                        12,12.4,ritik,true ,a ,null ,undefined ->primitive dt.
+                        [] () {} -> reference dt
+        
+        conditionals
+                if else else-if trenary operator switch case
+                
+                jab hi apko program me ek decision lena ho ,ki aage ka
+                execution kaisa h to waha par if else else-if use hota hai
+
+                if mei humesa true ya false aata hai
+
+                truthy and falsy values -> har value ko true ya false
+                banaya ja skta hai,ye depend krta hai,ki wo value ka type kya hai,agr wo value
+                truthy hai to true bnegi and falsy hai to false bnegi
+                null,undefined,NaN ,0,"",'',document.all -> false
+                baaki sb truthy
+
+                //synatx
+                if(condition){
+                        //code
+                }
+                else if(condition){
+                        //code
+                }
+                else if(condition){
+                        //code
+                }
+                else{
+
+                }
+                in charo bracket me se ek hi bracket chlega 
+                chae charo condition true hi kyu na ho, jaha pr
+                if ke andr true mila uske andr ka statement chlega
+                phir uske aage koi nhi chlega.
+                
+        loops
+                loops ka mtlb repetition
+                for,while,do-while,foreach,forin,forof
+                -> for and foreach are important
+
+                for(start ; end ; change){ //syntax
+
+                }
+                Q.
+                   for(var num=12;num<17;num++){
+
+                   }
+                   1.num ki akhri value kya hogi =17
+                   2.num ki akhri value jiske liye loop chlegi = 16
+
+
+                //syntax
+                start;
+                while(end //condition){ 
+                        change;
+                }
+
+                foreach ek normal loop nahi hai for and while ki trha,
+                jo numbers pe  ya start end par chlta hai,
+                ->foreach loop sirf array pe chlta hai.
+
+        functions
+                es5-> 1.function statement 2.function expression 3.anonymous function
+                es6->1.fat arrow function
+                        i.basic fat arrow
+                        ii.fat arrow with one parametre
+                        iii.fat arrow with implicit return
+
+                js mein function normal programming language
+                jaise nahi hai,iska matlab hai,yaha par js mein ,
+                functions banaane ke liye return type nahi batana padta
+                bas aapko function keyword likhna padega and aap usey
+                koi naam deke bana skte ho
+                
+                indepth-js mein functions ko first class functions
+                ka darja diya gaya hai,jiska matlab hai ki js mein
+                functions ko value /variable ki trha treat kiya ja skta
+                hai
+
+                //structure
+                function function_name(~parametre){
+                        //code
+                }
+
+                Q.What is function?
+                  koi aisa code jo apko baar baar use krna ho,ya
+                  fir koi aisa code jisko turant na chalana ho par kabhi
+                  chalana ho,usey function mein daal skte hai
+
+                Q.why we need?
+                  to reuse code and to wrap the code which we
+                  want to run in future at some point of time
+           
+           parameters->
+           arguments -> function call krne time jo bhejte hai paranthesis ke andr use argument khete hai
+
+                Syntax for all types of function
+                1.function abcd(){
+                        //function statement
+                }
+
+                2.var abcd = function(){
+                        //function expression
+                }
+
+                3.function(){
+                        //anonymous function
+                }
+
+                //fat arrow
+                4.
+                  i.   var b = ()=>{
+                        //basic fat arrow
+                       }
+                  ii.   var g = (ab)=>{} //fat arrow with one parametre (ab is parametre) g is name of function
+                   (or) var g = ab => {} //we can remove paranthesis because only one parametre is present
+                  
+                  iii.  var abcd = ()=>_____; //fat arrow with implicit return
+                             //jo bhi blanck me likha rhega wo return ho jayega
+                        ex:-
+                        var abcd = ()=>"Ritik";
+                        var ans = abcd(); // ans=Ritik
+        
+        return 
+                return ka malab hua ,jha par bhi return lgega
+                uske aage jo bhi likhoge wo jaayega jaha par function
+                call hua tha,return ->functions ke andr lagta hai
+                ex:-
+                  function abcd(){
+                        return 12;
+                  }  
+
+                  console.log(abcd()); // console me 12 print ho jayega      
+                  var ans = abcd(); //function call -> abcd() return 12 and that is 
+                                        store in ans. 
+                 
+                agr function kuch bhi return nhi krega to
+                wo bydefault undefined return ho jayega
+        
+        undefined,not defined,null
+                undefined is a value-> ye value tab di jaati hai
+                        jb variable ko koi value naa mili ho,iska matlab hai
+                        ,ye ek garbage value ki trha treat ki jaati hai,aap isey
+                        default value bhi kah skte ho
+                not defined is an error->koi particular element/identity
+                        ko use karna without it's declaration gives an 
+                        error,and that error is not defined error
+                null is also a value
+                        null is a special value that represents the intentional 
+                        absence of any object value. It is one of JavaScript's primitive 
+                        values and is used to denote a null object reference. 
+                       -> this is a value which resolve like,not found
+                       -> null is received when something is not found
+        
+        arrays
+                array ek data structure hai
+                array matlab jab bhi apko ek ya ek se jaada value
+                ek saath rakhni ho.
+                var users =["Harsh","harshika","harshita","akansha"];//0-based indexing in array in js
+                var arr =[1,2,"3",function(){},[],4]; //array me hum ek sath kuch bhi dal skte hai
+                                number ,string ,function,array,boolean etc
+
+                arr[0];// is trha se access krte hai
+                why we need array?
+                   a lot of times the data is in the shape of
+                   more than one member,to contain all data altogether,
+                   we can save it in an array.
+                
+                var arr =[1,2,3,4,5];
+                //how to loop an array
+                arr.forEach(function(val){
+                        console.log(val);
+                });
+                output: 1
+                        2
+                        3
+                        4
+                        5
+                //how to loop an array and do something
+                 with each element.
+                arr.forEach(function(val){
+                        console.log(val+1);
+                });
+                output: 2
+                        3
+                        4
+                        5
+                        6
+
+
+        objects
+                object ek tareeka hai jisse ki hum ek identity
+                ki details ko ek saath rakh skte hai
+
+                kai logo ka data = array
+                ek bande ka kai saara data = object
+
+                var obj = {  //object is trha bnega
+                        name: "Ritik",
+                        age: 20,
+                        email: "ritikdjsd@3enn.com",
+                        contact:2658488984;
+                };
+                obj.name; //dot operator for accessing the data of object
+
+                var obj2 = new object();//a null object is created with name obj2
+
+        
+        synchronous and asynchronous
+             synchronous code mein code humesha line by line chalta hai
+             async code line by line nahi chalta ,saara async code ek 
+                saath shuru kar diya jaata hai and jo pahle complete
+                ho jaaye uska answer de diya jaata hai.
+             
+             indepth:-
+                synchronous code directly main stack me jata hai
+                async code side stack me jata hai
+                
+        es6 climax
+        questions
+        prototypes
+        prototypes inheritance
+    js the dom-creating phase (code likh kr cheejein banana sikhna)
+
+-----------------------------------------------------------------------------
+   1.understand this call apply bind
+   2.prototypal inheritance
+   3.closures
+   4.event delegation
+   5.Higher-order functions
+   6.Error Handling (try...catch blocks)
+   7.custom Events
+----------------------------------------------------------------------------------------
+   1.this call apply bind
+        this keyword js mein one of the most suspenseful keyword hai
+        (keyword ka matlab hota hai ki aisa word jiska koi matlab ho programming 
+                language mein)
+        this ki value bar bar badal sakti hai alag alag 
+        condition mein,saari conditios ko seekh jaao to this
+        ko samajh jaaoge.
+
+   ->alag alag condition mein this ki value:
+        global -window
+        function -window
+        method(aisa function jo object ke andr ho use method khete hai)  -object 
+        fnc inside method(es5) -window
+        fnc inside method(es6)  -object
+        constructor fnc mein this ki value -new blank object
+        event listener mein this ki value  -that element jispar event lis. laga ho
+
+    ->call apply bind
+        ye tin tarrike hai function ko call krne ke kisi 
+        object ko this maan kar
+
+------------------------------------------------------------------
+2.prototypal inheritance
+         hum objects create karte hai and kisi ek parent constructor
+        function ke prototype mein kuchh add kr dete hai and jab bhi add
+        hota hai to wo parent se banne waale sabhi children instances ko wo     
+        properties jo parent ko prototype mein di gayi thi wo milti hai
+        saugaat mein.
+//-----------------------------------------------------------------------------
+3.closures
+        aisa koi bhi function jo ek aur function ko return karde usey
+        closure kahte hai
+---------------------------------------------------------
+4.event delegation
+         event delegation = jab aap event listener se kai saare different
+        elements ke events ko handle kar sake
+        event listener ko parent par lagao and unko id, class ya fir tag
+        ke basis par differentiate karke different task karao
+
+------------------------------------------------------------------
+5.Higher-order functions
+        aisa koi fnc jo ki ek fnc ko parameter mein accept karle and/or
+        ek functio ko return karde
+        
+------------------------------------------------------------
+ 6.Error Handling (try...catch blocks)
+
+        function divide(a,b){
+        try{
+        if(b==0){
+                throw Error("koi gadbad hui");
+        } 
+        console.log(a/b);
+        }
+        catch(err){
+                console.error(err);
+        }
+        }
+
+        divide(12,0);
+
+--------------------------------------------------------
+In JavaScript, events are a fundamental concept that allows you to interact with users and respond to various actions like clicks, key presses, form submissions, and more. Events form the basis for creating dynamic and interactive web applications. This comprehensive guide will cover the basics of events, how to handle them, and some advanced concepts.
+
+What Are Events?
+Events are actions or occurrences that happen in the browser, such as a user clicking a button, submitting a form, or hovering over an element.
+JavaScript can detect these events and allow you to run code in response, making your web pages interactive.
+Common Types of Events
+Mouse Events:
+
+click: Triggered when an element is clicked.
+dblclick: Triggered when an element is double-clicked.
+mousedown: Triggered when a mouse button is pressed.
+mouseup: Triggered when a mouse button is released.
+mouseover: Triggered when the mouse pointer is moved onto an element.
+mouseout: Triggered when the mouse pointer is moved out of an element.
+mousemove: Triggered when the mouse pointer is moved within an element.
+Keyboard Events:
+
+keydown: Triggered when a key is pressed down.
+keyup: Triggered when a key is released.
+keypress: Triggered when a key is pressed down and released (deprecated in modern browsers).
+Form Events:
+
+submit: Triggered when a form is submitted.
+change: Triggered when the value of an element changes (e.g., input, select).
+focus: Triggered when an element gains focus.
+blur: Triggered when an element loses focus.
+Window Events:
+
+load: Triggered when the whole page, including all dependent resources, is loaded.
+resize: Triggered when the browser window is resized.
+scroll: Triggered when the window is scrolled.
+Touch Events (for mobile):
+
+touchstart: Triggered when a touch point is placed on the touch surface.
+touchmove: Triggered when a touch point is moved along the touch surface.
+touchend: Triggered when a touch point is removed from the touch surface.
+Event Handling
+Event handling involves responding to events and executing specific code when an event occurs. There are several ways to handle events in JavaScript:
+
+1. Inline Event Handlers:
+You can add event handlers directly in HTML elements.
+
+html
+Copy code
+<button onclick="alert('Button clicked!')">Click Me</button>
+This method is generally discouraged as it mixes HTML and JavaScript, making the code harder to maintain.
+2. Event Handlers with JavaScript:
+You can assign event handlers using JavaScript by accessing elements and setting their event properties.
+
+html
+Copy code
+<button id="myButton">Click Me</button>
+<script>
+  const button = document.getElementById('myButton');
+  button.onclick = function() {
+    alert('Button clicked!');
+  };
+</script>
+3. addEventListener Method:
+This is the most modern and recommended way to handle events. It allows you to attach multiple event handlers to a single element.
+
+html
+Copy code
+<button id="myButton">Click Me</button>
+<script>
+  const button = document.getElementById('myButton');
+  button.addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+
+  button.addEventListener('click', function() {
+    console.log('Another handler for the click event!');
+  });
+</script>
+You can add multiple listeners for the same event without overwriting existing ones.
+Event Object
+When an event occurs, the browser creates an event object, which is passed to the event handler. This object contains information about the event and can be used to access various properties and methods related to the event.
+
+html
+Copy code
+<button id="myButton">Click Me</button>
+<script>
+  const button = document.getElementById('myButton');
+  button.addEventListener('click', function(event) {
+    alert('Button clicked at coordinates (' + event.clientX + ', ' + event.clientY + ')');
+  });
+</script>
+event is the event object.
+event.clientX and event.clientY give the coordinates of the mouse click relative to the viewport.
+Event Propagation
+Event propagation describes the way events travel through the DOM tree. There are three phases:
+
+Capturing Phase: The event travels from the document root down to the target element.
+Target Phase: The event reaches the target element.
+Bubbling Phase: The event bubbles up from the target element back to the document root.
+You can specify whether an event should be captured or bubbled by passing a boolean value as the third argument to addEventListener.
+
+html
+Copy code
+<div id="outer">
+  <button id="inner">Click Me</button>
+</div>
+<script>
+  document.getElementById('outer').addEventListener('click', function() {
+    alert('Outer div clicked!');
+  }, true); // Capturing phase
+
+  document.getElementById('inner').addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+</script>
+The true parameter in addEventListener indicates that the handler should execute during the capturing phase.
+Preventing Default Actions
+Some events have default actions, such as a form submission reloading the page. You can prevent these default actions using the preventDefault method.
+
+html
+Copy code
+<a href="https://example.com" id="myLink">Go to example.com</a>
+<script>
+  const link = document.getElementById('myLink');
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    alert('Link click prevented!');
+  });
+</script>
+This prevents the browser from navigating to https://example.com when the link is clicked.
+Event Delegation
+Event delegation is a technique for handling events efficiently. Instead of adding event listeners to individual child elements, you add a single event listener to a common parent element. This leverages event bubbling to handle events from child elements.
+
+html
+Copy code
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+<script>
+  const list = document.getElementById('myList');
+  list.addEventListener('click', function(event) {
+    if (event.target.tagName === 'LI') {
+      alert('Clicked on ' + event.target.textContent);
+    }
+  });
+</script>
+This approach is more efficient and scalable, especially for dynamically generated elements.
+Advanced Event Concepts
+1. Custom Events:
+You can create and dispatch custom events to communicate between different parts of your application.
+
+html
+Copy code
+<script>
+  const event = new CustomEvent('myEvent', { detail: { key: 'value' } });
+  document.addEventListener('myEvent', function(event) {
+    console.log('Custom event triggered:', event.detail);
+  });
+  document.dispatchEvent(event);
+</script>
+2. Throttling and Debouncing:
+To improve performance, especially with events like scroll and resize, you can throttle or debounce event handlers to limit how often they run.
+
+Throttling: Ensures a function is called at most once every specified interval.
+Debouncing: Ensures a function is called only after a specified amount of time has passed since the last time it was invoked.
+Summary
+Events in JavaScript are powerful tools for making web pages interactive. By understanding how to handle events, prevent default actions, delegate event handling, and create custom events, you can build dynamic and responsive applications. Here’s a quick recap:
+
+Use addEventListener for attaching event handlers.
+Understand the event object and its properties.
+Utilize event propagation and event delegation for efficient event handling.
+Prevent default actions and handle custom events for advanced interactions.
+Mastering events in JavaScript will greatly enhance your ability to create engaging and interactive user experiences.
+
+
+--------------------------------------------------------
+ 7.custom Events
+        events-> click,dbclick,mouseover,input
+        isi trha hum khud ka event bna skte hai 
+    how->
+        make event
+        attach event to some dom element
+        dispatch that event from that dom element in which you attached the event
+
+    why-> 
+
