@@ -1,0 +1,129 @@
+sync->main call stack
+async->call back queue\(side stack)
+->sbse phle main stack me jo task rhete hai use kiya jata hai.
+jb main stack khali ho jata hai tb async (call back queue ) ke
+task main stack me laye jaete hai and phir use chlate hai
+
+-> sync code sbse phle chlega 
+-> asyns code pure main stack ke khali hone ke bad chlega
+    (jo code async me phle process kr lega whi sbse phle main stack me laya jayega)
+        ex: if 3 task hai (a,b,c)and b ne process complete kr liya
+        and main stack bhi khali hai to 'b' aa jayega main me ,bhle hi 'a' phle aaya ho async code me
+-> event loop hmesa check krte rhta hai ki main stack khali hai ki nahi
+
+
+ASYNC JS
+kahaani suno jubaani suno
+
+    aisa koi bhi code jismein kuchh time lagta hai, js mein usse by default in
+    most-cases-async-code-maan-kar-side-stack mein daal diya jaata hai
+
+        settimeout-settimeout ka code kuch der bad chlta hai
+
+        setinterval-setinterval ka code kuch der baad chlta hai 
+            bar bar ek particular interval mein
+
+        Fetch API-ye kisi aur url(API)  par ja kr kuch data layega ya
+            data hamare pas se us url pas le kr jayega
+
+            kyuki ye internet par jaayega aur fir data ko lekar aayega to ismein time
+            lagta hai to by default hi js mein fetch ko async banaaya gaya hai kyuki fetch
+            ka kaam hai data laana wo bhi kisi url se ab aisa ho skta hai us url ki
+            website slow ho, to data laane mein time lage aur agar fetch synchronous hota
+            to uske baad ka code tab tak nahi chalta jab tak uska data nahi aajata, which
+            is a big problem, poora code atak sakta tha
+            ->fetch mein 2 bar then lgta hai
+
+        Axios (or other HTTP libraries)-ye bhi whi krega jo fetch krta hai bs
+            ye thoda jyda developer friendly hai
+            ->Axios mein 1 bar then lgta hai
+
+        promise – ye janaab ke andar jo code likhoge wo apan kaam karega aur ye
+            khud side stack mein chale jaayege us code ko lekar aur jab andar se code
+            resolve kiya jaayega tab ye chalenge
+            promises kya hai ?
+                ->kuchh code socho man mein, jo ki async code ho, matlab ki ye
+                side stack mein jaayega aur baad mei chalega main stack ke, ab
+                ye socho ki aapne is code ko likha hai to iska answer kabhi
+                aayega aur aisa bhi ho sakta hai kis answer naa aaye, promises
+                kya hai aisa samjho ki aap promise ke andar koi bhi async code
+                Likhdo jo man mein aaye aur promise aapko ek parchi dedeta hai
+                and wo parchi par by default likha hota hai waiting, parchi par
+                do events hote hai mainly ek event ka naam hai then aur ek event
+                ka naam hai catch, agar aapka data aagaya to parchi pe resolved
+                Likhjaayega waiting ki jagah and then chalega aur agar data mein
+                dikkat aayi to catch chalega and waiting ki jagah rejected
+                Likhjaayega
+
+                aman raghav ke paas gaya aur bola ki khaana lene bhejdo
+                kisiko raaghav ne kisi ko bhej diya and aman ko bola ye parchi
+                lelo jab bhi wo banda aajayega to parchi par pata chal jaayega
+
+        (ye sabhi use hi tab kiye jaate hai jab aapko kuchh aisa karna ho jismein
+        time lagega) ->upr walw pancho  Async code hai
+
+Callbacks
+    callback kuchh khaas nahi balki sirf ek function hota hai,
+    bas thoda special jo hai wo ye hai ki ise pass kiya jaata hai as
+    an argument jab particular async code chal jaaye
+
+    callback kuchh bhi nhi ,ek function hai jise pass kiya gaya ho
+    kisi aur funciton mein aur jab wo function chale to aap us pass
+    kiye gaye callback function ko chala paayege
+
+    -> to use kaise karey ?
+       callback pahli cheej to ek function hai, aap is function me wo
+       sab likhdo jo aapko chalaana ho jab answer aajaye, aur ise tab
+       chalao jab aapka async code chal chuka ho
+       ex:
+    function doSomeAsyncTask(url, callback) {
+        fetch(url)
+        .then ( raw => raw. json ( ) )
+        .then ( result => {
+            callback () //jb data aa jayega tb ye chlega
+        })
+    
+    doSomeAsyncTask("some url", function(){
+        //__________task...
+    })
+
+
+Promises ->already covered
+
+Async/Await 
+         koi bhi function banaalo and uske andar jo man mein aaye wo
+        async code likhdo, ab jab aap async likhte ho to baad waali line pahle chal
+        jaati hai kyuki asyn side stack pe hota hai aur baad waali Line agar async ke
+        basis par hui to aapka code fail ho jaayega, wo isliye kyuki aapka code depend
+        karta hai async code par jo ki baad mein chalega sync code chalne ke baad
+
+Event Loop
+    The event loop is a fundamental concept in JavaScript that allows it to handle asynchronous operations and manage concurrent tasks effectively. Understanding the event loop is crucial for grasping how JavaScript works, particularly in the context of asynchronous programming.
+
+    1. Overview of the Event Loop
+    The event loop in JavaScript is a mechanism that handles the execution of multiple pieces of code over time, allowing for non-blocking behavior. It is particularly important in environments like web browsers and Node.js, where it enables the efficient handling of events, such as user inputs, network requests, and timers, without blocking the main execution thread.
+
+
+Callbacks vs Promises vs Async/Await
+
+Generators
+    // aap execution ko pause kr skte ho and bol sakte ho ki ab agla
+    step karo aur fir aap agla step jab bhi chahiye wo step kar skte ho
+    Generators in JavaScript are a special kind of function that can pause and resume their execution. They provide a powerful way to handle asynchronous programming, iterate over data structures, and implement complex control flows. Understanding how generators work and how to use them can greatly enhance your ability to write efficient and readable code.
+
+    
+
+    What is a Generator?
+    A generator function is defined using the function* syntax and allows you to use the yield keyword to pause execution. When a generator function is called, it returns an iterator known as a generator object. This object can be used to control the function's execution and retrieve values from it incrementally.
+
+
+Web Workers
+
+    thread aisa smjho ki ek computational task ko perform krne ke liye ek thread aloted hota hai
+
+    usually humaara poora code single thread par chalta hai par kai baar kuch bade calculations perform karne pad jaate hai jiski wajha se aapka
+    main thread busy ho jaata hai yaa fir wo kaafi jaada loaded ho jaata hai aur apke baaki tasks ki performance kam ho jaati  hai
+
+    is situation ko acche se handel karne ke liye we use web Workers,aap chaaho to apna koi task web worker ko bhej sakte ho jo ki doosra thread mein usko perform krega and aapka main thread efficiently baaki cheejo ko handel kar paayega
+
+    aap apni main js file se data send kr skte ho and aap worker file se data accept karoge and jo perform karna hai karoge and waha se data waapas main file bhejoge and main file mein waapis accept kroge

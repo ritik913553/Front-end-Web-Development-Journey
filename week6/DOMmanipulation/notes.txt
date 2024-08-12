@@ -1,0 +1,54 @@
+DOM = Document Object Model
+    jo bhi hum website par dekhte hai wo sb kuch body tag ke andar banta hai, ab jo body mein banta hai wahi humein website par dikhta hai ,DOM actually hota hai thoda aasan shabdo mein HTMl Tag aur uska poora control js mmein
+
+    kabhi aap chaate ho ki aap ek button ko click krke ek div gaayab karde
+    html mein koi aisa feature nhi hai jo click ko handel(click pe aapko kya perform krna hai) kr sake
+
+    aisa js(java Script) jo aapke webpage par chhejo ko badal sake,us js ko hum perform kar skte hai DOM ke saath
+    aisa js la koi bhi code jo webpage mein kuch bhi change karega wo js ka DOM ka code kahlaayega
+
+DOM Manipulation
+    html body mein kuch bhi change krna ya manipulate karna actually dom Manipulation kahlaata hai.
+
+usse        ye kardo    ye hone par
+ ^             ^           ^
+ |             |           |
+selection   change       event
+
+Document->pura html ka code (<html> yaha se lekr   </html>yaha tk)
+    The document object represents your web page.
+    If you want to access any element in an HTML page, you always start with accessing the document object.
+
+Accessing Elements:
+    document.querySelector()
+        (ek webpage banao,usme kuch element banao)
+
+Modifying Elements:
+    innerHTMl ,textContent
+
+Manipulating Styles and Classes:
+    Styles
+    classList
+
+Creaating and Deleting Elements:
+    createElement()
+    appendChild()
+    removeChild()
+
+Event Handling:
+    addEventListener()
+
+    jab bhi aap kisi element par kisi bhi prakar ka koi 
+    action krte ho to waha par event by default automatically
+    raise hota hai ab agr aapne koi event listenr nhi banaya hai
+    to wo event ignore krdiya jata hai par agar aapne listner 
+    banaya hai us event par to wo event ignore nahi kiya 
+    jaayega balki uska listner chalega
+
+
+
+Event Object
+    // The Event object in DOM (Document Object Model) JavaScript is a fundamental component that provides information about events that occur on a webpage, such as clicks, keypresses, or custom events. Understanding the Event object and its properties is crucial for handling and responding to user interactions effectively.
+
+    // Basic Overview of the Event Object:
+    // The Event object represents the event itself, and it includes properties and methods that describe the event's characteristics and behavior. When an event occurs, an instance of the Event object is automatically passed to the event handler function.

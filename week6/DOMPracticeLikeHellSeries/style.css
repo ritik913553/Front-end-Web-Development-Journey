@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Question-6 */
+/* body{
+    padding: 20px;
+}
+#tabs{
+    display:flex;
+    gap: 20px;
+}
+.tab{
+    padding: 12px 22px;
+    background-color: gray;
+    border: 2px solid #dadada;
+    border-radius: 4px;
+    font-weight: 700;
+}
+.tab:hover{
+    cursor: pointer;
+}
+h3{
+    margin-top: 20px;
+    width: 50%;
+    display: none;
+} */
+
+
+/* Question->7
+
+#center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+#center h3{
+    opacity: 0;
+}
+#downloaCapsul{
+    width: 200px;
+    height: 10px;
+    background-color: #dadada;
+    border-radius: 10px;
+
+}
+#progress{
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) .2s ;
+    width: 0%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: #1fce3c;
+}
+ */
+
+
+ /* Questiohn->8
+ #main{
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+ }
+.container{
+    padding: 10vw 25vw;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 50px;
+    border: 1px solid #dadada;
+    outline-color: royalblue;
+}
+.people{
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.person{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    width: 7vw;
+    height: 7vw;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+}
+img{
+    height: 100%;
+    width: 100%;
+    
+} */
+
+
+/* Question->9 */
+/* 
+body{
+    padding: 30px;
+}
+textarea{
+    width: 400px;
+    height: 130px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #dadada;
+    outline-color: royalblue;
+    resize: none;  //isse text area wala box ka size badh nhi sakta
+    padding: 10px;
+} */
+
+/* Question->10 */
+/* Style for progress bar */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #4caf50;
+    z-index: 9999; /* Ensure it stays on top of other content */
+    transition: width 0.1s ease-in-out; /* Smooth transition for the width */
+}
+
+/* Basic content styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#content {
+    padding: 20px;
+    height: 2000px; /* Adjust to ensure scrollable content */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}

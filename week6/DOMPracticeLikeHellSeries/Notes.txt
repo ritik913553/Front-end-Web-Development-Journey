@@ -1,0 +1,67 @@
+1.Crate a HTML page with a button,when the button is clicked,change the text of a paragraaph element.
+
+2.Create a page with two images and a button,when
+the button is clicked,swap the source attribute of the images.
+
+3.Create a form with input fields ana a submit button.use JavaScript to validate the form and display an error message if the input is invalid.
+
+4.Create a unordered list.Allow users to add and 
+remove list items dynamically using button
+
+5.Build a countdown timer that starts when a button
+is clicked and updates the display in real-time
+
+6.Create a tabbed interface where clicking on tabs
+displays different content section without page
+reload
+
+7.Display a progress bar that update in real-time
+,showing the progress of a task,download,or from 
+submission.
+
+8.Create a serch bar that displays live search results
+as users type,updating the results without requiring
+a full page reload.
+
+9.Build a character counter for a text area or inputfield,which updates in real 
+
+10.show a progress bar which shows how much page has been scrolled
+
+-------------------------------------------------
+about textarea tag in HTML
+The <textarea> tag in HTML is used to create 
+    a multi-line text input field, allowing 
+    users to input large amounts of text, such 
+    as comments, messages, or code snippets. 
+    Unlike the <input> tag with type="text",
+    which is typically used for single-line 
+    text input, <textarea> can accommodate 
+    multiple lines of text.
+Attributes
+name: Specifies a name for the textarea. This name is used when submitting form data.
+rows: Specifies the number of visible text lines.
+cols: Specifies the visible width of the textarea in characters.
+Content between opening and closing tags: This content will appear as the default text within the textarea.
+-------------------------------------------------
+document.documentElement.scrollHeight:
+This gets the total height of the webpage content. It includes both the content that is currently visible in the viewport and the content that extends beyond the viewport and requires scrolling to be seen.
+
+document.documentElement.clientHeight:
+This gets the height of the visible part of the webpage, i.e., the height of the browser window excluding any content that requires scrolling to see.
+
+Subtracting clientHeight from scrollHeight:
+The difference between scrollHeight and clientHeight represents the height of the content that is outside the viewport and needs to be scrolled to be brought into view.
+Essentially, scrollHeight - clientHeight gives you the total amount of vertical space in pixels that you can scroll through on the webpage.
+
+window.pageYOffset:
+This property returns the number of pixels that the document has been vertically scrolled.
+It is a part of the window object and provides the current scroll position in the vertical direction.
+window.pageYOffset is generally supported in modern browsers and is the recommended way to get the vertical scroll position.
+It is equivalent to window.scrollY.
+
+document.documentElement.scrollTop:
+This property returns the number of pixels that the document is currently scrolled vertically from the top.
+It is a property of the document.documentElement object, which typically refers to the <html> element.
+document.documentElement.scrollTop was commonly used in older browsers, especially Internet Explorer, to determine the scroll position.
+
+->By using both window.pageYOffset and document.documentElement.scrollTop, you ensure that your code will work across a wide range of browsers, including both modern and older ones. This approach provides a fallback mechanism that enhances the robustness and compatibility of your code.
