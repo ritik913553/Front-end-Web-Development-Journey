@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+    color: white;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    position: fixed;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#nav h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#main h1{
+    font-size: 130px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 100px;
+    /* background-color: red; */
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    z-index: 1; /* uske original position se z index me 1 ,ye isliye hua kyu phle usko hum relatie kiye*/
+}
+#main h1:nth-child(2){
+    margin-top: 120px;
+}
+#main h1:nth-child(3){
+    text-align: center;
+}
+#main h1:nth-child(4){
+    text-align: center;
+}
+
+img{
+    height: 380px;
+    position: absolute;
+    top: 10%;
+    left: 40%; 
+}
+
+#img1{
+    rotate:20deg;
+}
+#img2{
+    rotate: 10deg;
+}
+
+#bottom{
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-transform: uppercase;
+   
+}
+#bottom h3{
+    font-weight: 300;
+}
+#bottom h3:nth-child(2){
+    text-align: center;
+}

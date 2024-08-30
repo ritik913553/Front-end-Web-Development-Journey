@@ -1,0 +1,46 @@
+DEVELOPER pROBLEMS
+----------------------
+1.Debugging a Typeerror:Cannot read property 'X' of undefined
+2.Handling Asynchronous Operations
+
+3.Workinh with Local Storage
+    local storage ek aisa space hai browser
+    ke paas jismein tum data store kardo to
+    data stored hi rheta hai ,aap chaahe
+    to browser band krdo,refresh krdo ya
+    kuch bhi karo aapka data stored rahega
+    jab tak aap khud usey delete naa kar delete
+
+    local storage pure browser ka hota hai 
+    ya website ka? localstorage hota to browser ka part
+    hai par data store ye website ke naam 
+    se karta hai 
+
+    localStorage.setItem('key', 'value');
+    let value = localStorage.getItem('key');
+    localStorage.removeItem('key');
+    localStorage.clear();clear all item
+
+    if (localStorage.getItem('key') !== null) {
+    // Item exists
+    }
+
+    let length = localStorage.length;
+
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+    console.log(key, value);
+    }
+
+    task->ek button banao jisse aap user Block
+    kardo ab jab bhi wo website khole use screen
+    par blocked dikhey,nahi to website show 
+    ho and ek button jisse wo unblock ho
+
+
+4.Blocking scroll until something happens
+
+    The classList property in JavaScript is a convenient way to manipulate the classes of an HTML element. It provides methods to add, remove, toggle, and check classes without having to manipulate the entire className string. 
+
+5.custom tooltip

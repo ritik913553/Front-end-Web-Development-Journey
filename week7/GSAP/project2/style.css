@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: cyan;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: salmon;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: chocolate;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+#circle{
+    height: 300px;
+    width: 300px;
+    background:linear-gradient(rgb(165, 231, 24),royalblue);
+    border-radius: 50%;
+}
